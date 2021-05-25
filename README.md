@@ -1,6 +1,6 @@
-#DOCODE HELPER
+# DOCODE HELPER
 
-Create a file called`n` and `Makefile` in docode. They MUST go in the root of your project in docode.
+Create a file called `n` and `Makefile` in docode. They MUST go in the root of your project in docode.
 
 
     $ touch n && Makefile
@@ -8,7 +8,7 @@ Create a file called`n` and `Makefile` in docode. They MUST go in the root of yo
 
 Copy the code in the respective files in this repo.
 
-set permissions for the shell script
+set permissions for the bash script
 
       $ chmod +x n
 
