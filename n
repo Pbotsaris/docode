@@ -1,0 +1,47 @@
+#!/bin/bash
+if [ $1 = "clean" ]; then
+  rm -R "${DIR}"
+  return 1
+fi
+
+if [ -z $1 ] || [ -z $2 ]; then
+  echo "ERROR: must pass arguments. Example:"
+  echo "->  $ ./new 04 my_file"
+else
+  mkdir "ex$1" && touch "ex${1}/${2}.c"
+  echo "created file ${2}.c in ex${1}/"
+  export DIR="ex$1/"
+  export FILE="$2.c"
+  echo "export: DIR=ex${1}/ and FILE=${2}.c"
+fi
+
+case $3 in
+-m)
+  echo "creating main function...."
+  if [ $4 = "hello" ]; then
+    echo "#include <stdio.h> 
+
+int main(){
+printf(\"hello world\");
+return 0;
+}" >>"ex${1}/${2}.c"
+  else
+    echo " 
+
+int main(){
+return 0;
+}" >>"ex${1}/${2}.c"
+  fi
+  ;;
+-f)
+  if [ -n $4 ]; then
+    echo "creating function ${2} type ${4}"
+    echo "
+
+    ${4} ${2}(){
+    }" >>"ex${1}/${2}.c"
+  else
+    echo "Must enter a type after -f. function not created"
+  fi
+  ;;
+esac
