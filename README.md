@@ -19,7 +19,7 @@ set permissions for the bash script
 creates a directory `ex04/` and `file_name.c`  and exports `DIR=EX04/` and `FILE=file_name.c`.  not that is important to use the syntax above  `. ./`  to source the script otherwise it won’t work.
  
  ## make 
- So now to compile your make file should be read to go. To compile run: 
+ Because the script updated your  `Makefile` you should should be read to go to use `make`. To compile simply run: 
 
       make build
  run
