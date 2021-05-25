@@ -37,7 +37,7 @@ clean binary:
 
 creates file my_atoi.c  with the function `int my_atoi(){}` .
 
-     $ cat my_atoi.c
+     $ cat ex04/my_atoi.c
 
       int my_atoi()
       {
