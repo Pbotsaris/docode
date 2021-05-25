@@ -16,7 +16,9 @@ set permissions for the bash script
 
     . ./n 04 my_file_name 
 
-creates a directory `ex04/` and `file_name.c`  and exports `DIR=EX04/` and `FILE=file_name.c`.  not that is important to use the syntax above  `. ./`  to source the script otherwise it won’t work.
+creates a directory `ex04/` and `file_name.c`  and exports `DIR=ex04/` and `FILE=file_name.c`.  
+
+**NOTE:**  It is important to use the syntax above  `. ./`  to source the script otherwise it won’t work.
  
  ## make 
  Because the script updated your  `Makefile` you should should be read to go to use `make`. To compile simply run: 
